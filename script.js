@@ -17,6 +17,10 @@ function addTask() {
     const fakeCheckboxInput = document.createElement('span');
     fakeCheckboxInput.classList.add('fake-checkbox');
 
+    const checkIcon = document.createElement('i');
+    checkIcon.classList.add('fa-solid');
+    checkIcon.classList.add('fa-check'); 
+
     const taskItemText = document.createElement('p');
     taskItemText.innerText = newTaskInput.value;
 
@@ -28,6 +32,7 @@ function addTask() {
 
     taskItem.appendChild(checkboxInput);
     taskItem.appendChild(fakeCheckboxInput);
+    fakeCheckboxInput.appendChild(checkIcon);
     taskItem.append(taskItemText);
     taskItem.appendChild(buttonTrash);
     buttonTrash.appendChild(trashItem);
